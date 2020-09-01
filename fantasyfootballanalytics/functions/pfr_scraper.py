@@ -1,6 +1,6 @@
 import pandas as pd
 import requests
-import definitions as app_def
+# import definitions as app_def
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
@@ -180,7 +180,7 @@ class FProQBPlayer(FProPlayer):
         if player != '':
             player_df = self.data_frame.query('player==@player')[['player', 'passAtt', 'passComp', 'passYds',
                                                                   'passTds', 'passInt', 'rushAtt']]
-            player_transposed = player_df.T
+            # player_transposed = player_df.T
             fig = px.bar(
                 go.Bar(
                     x=player_df.columns,
