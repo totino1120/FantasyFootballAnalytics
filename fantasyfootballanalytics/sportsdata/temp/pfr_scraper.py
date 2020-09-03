@@ -16,8 +16,7 @@ class FProPlayer:
         self.__url_proto = 'https'
         self.__url_host = 'www.fantasypros.com/nfl/projections/'
         # url_req_type = 'league'
-        self.source_url = '{proto}://{host}/{lookup}.php'.format(proto=self.__url_proto, host=self.__url_host,
-                                                                 lookup=self.lookup)
+        self.source_url = f'{self.__url_proto}://{self.__url_host}/{self.lookup}.php'
         self.__file = 'fpro{lookup}{year}.csv'.format(lookup=self.lookup, year=self.season)
         self.destination_file = app_def.DATA_PATH.joinpath(self.__file).resolve()
 
